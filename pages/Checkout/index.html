@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="checkout.css" type="text/css">
+    <title>Checkout Template</title>
+</head>
+<body>
+    
+    <section class="main">
+        <!-- List of products in cart -->
+        <aside class="cart">
+            <div class="cart-items"></div>
+            <div class="cart-items"></div>
+            <div class="cart-items"></div>
+        </aside>
+        
+
+        <aside class="info-container">
+            <div class="info">
+              <p><strong>Shipping Information</strong></p>
+              <div class="PersonalInfo">
+                <div>
+                    <p>Full Name</p>
+                    <input required type="text" placeholder="Full Name">
+                </div>
+                <div>
+                    <p>Address</p>
+                    <input required type="text" placeholder="Address">
+                </div>
+                <div>
+                    <p>Phone Number</p>
+                    <input required type="number" placeholder="Phone Number">
+                </div>
+              </div>
+              <div class="locationInfo">
+                <div>
+                    <p>City</p>
+                    <input required type="text" placeholder="City">
+                </div>
+                <div>
+                    <p>State</p>
+                    <select name="states" id="states">
+                        <option value="states">Select State</option>
+                        
+                    </select>
+                </div>
+                <div>
+                    <p>Zip Code</p>
+                    <input required type="number" placeholder="Zip Code">
+                </div>
+              </div>
+                
+            </div>
+            <div class="cardInfo">
+                <p><strong>Card Information</strong></p>
+
+                <div>
+                    <p>Cardholder Name</p>
+                     <input type="text" placeholder="Cardholder Name">
+                </div>
+                <div>
+                    <p>Card Number</p>
+                    <input type="number" placeholder="Card Number">
+                </div>
+                <div>
+                    <p>Expiration Date</p>
+                    <input type="number" placeholder="MM/YY">
+                </div>
+                <div>
+                    <p>CVV</p>
+                    <input type="number" placeholder="CVV">
+                </div>
+                
+                
+                
+                
+            </div>
+            <div class="coupons">
+                <p><strong>Coupon Code</strong></p>
+                <input id="potentialCode" type="text" placeholder="Enter Coupon Code">
+                <!-- <button onClick="applyCouponCode()">Apply</button> -->
+                <button id="applyCoupon">Apply</button>
+            </div>
+            
+        </aside>
+        
+    </section>
+    <section class="total">
+        <h1>Total: $0.00</h1>
+        <div class="button-container">
+                <button id="checkout-button">Checkout</button>
+            </div>  
+    </section>
+    
+    <script rel="script" src="checkout.js"></script>
+</body>
+</html>

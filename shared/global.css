@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "chili","sans-serif";
+}
+/* 
+#EE3124:  "Chilis Red" use for Buttons, Highlights, and Navigation;
+#749E33: "Green" use for Brand Accents;
+#F5E9E2: "Beigish" use for Background and Content;
+#231F20: "Shadow Grey" use for Secondary Sections;
+#2E294E: "Space Indigo" use for Other Backgrounds if needed;
+Black: use for Text;
+*/
+@font-face {
+    font-family: "chili";
+    src: url("../assets/fonts/chilispepper.ttf");
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5E9E2;
+}
+a h3{
+    color: black;
+    text-decoration: none;
+    display: contents;
+}
+.left{
+    margin: 0px 10px;
+    padding: 10px;
+}
+.left img{
+    width: 80px;
+    height: 35px;
+
+}
+.right{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0px 2px;
+    margin: 0px 15px;
+}
+.right img{
+    width: 80px;
+    height: 55px;
+    padding-right: 10px;
+}
+#cart{
+    background: none;
+    border: none;
+}
+#cart:hover{
+    cursor: pointer;
+}
+#cart:active{
+    background-color: #33Ef33;
+
+}
+br{
+    height: 5px;
+    width: 100%;
+    display: inline;
+}
+footer{
+    width: 100%;
+    background-color: #2E294E;
+    color: white;
+}
