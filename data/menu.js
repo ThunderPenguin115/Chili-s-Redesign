@@ -1,5 +1,10 @@
 const menuItems = [
     {
+        name: "Full Rack Of Ribs",
+        menu: "Lunch",
+        price: "28.39"
+    },
+    {
         name: "The Big QP Burger",
         menu: "Lunch",
         price: "14.39"
