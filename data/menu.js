@@ -2,18 +2,59 @@ const menuItems = [
     {
         name: "Full Rack Of Ribs",
         menu: "Lunch",
-        price: "28.39"
+        price: 28.39
     },
     {
         name: "The Big QP Burger",
         menu: "Lunch",
-        price: "14.39"
+        price: 14.39
     },
     {
-        name : "Triple Dipper",
-        menu : "Lunch",
-        price : "17.59",
-        image : "assets/tD.avif"
+        name: "Triple Dipper",
+        menu: "Lunch",
+        price: 17.59,
+        image: "assets/tD.avif"
+    },
+    {
+        name: "Bone-In Wings",
+        menu: "Lunch",
+        price: 17.79
+    },
+    {
+        name: "Boneless Wings",
+        menu: "Lunch",
+        price: 14.79,
+    },
+    {
+        name: "",
+        menu: "Dinner",
+        price: ,
+    },
+    {
+        name: "",
+        menu: "Dinner",
+        price: ,
+    },
+    {
+        name: "",
+        menu: "Dinner",
+        price: "",
+        image: 
+    },
+    {
+        name: "",
+        menu: "Dinner",
+        price: 
+    },
+    {
+        name: "",
+        menu: "Dinner",
+        price: 
+    },
+    {
+        name: "",
+        menu: "Dinner",
+        price: 
     }
 ];
 
