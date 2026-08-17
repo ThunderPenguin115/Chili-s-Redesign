@@ -4,6 +4,12 @@ const menuItems = [
         menu : "Lunch",
         price : "17.59",
         image : "assets/tD.avif"
+    },
+    {
+        name : "The Chipper",
+        menu : "Lunch",
+        price : "13.99",
+        image : "assets/tD.avif"
     }
 ];
 

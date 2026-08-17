@@ -63,6 +63,7 @@ const states = [
   "Wyoming"
 ];
 
+// States options
 function statesFormOptions(){
     let formSelectStates = document.getElementById("states");
     for(let i = 0; i < states.length; i++){
@@ -73,6 +74,8 @@ function statesFormOptions(){
     }
     
 }
+
+// Coupon Codes
 function applyCouponCode() {
     // console.log("Coupon code applied");
 
@@ -87,6 +90,11 @@ function applyCouponCode() {
         }
     }
 }
+
+
+// Calculations
+
+
 
 
 
