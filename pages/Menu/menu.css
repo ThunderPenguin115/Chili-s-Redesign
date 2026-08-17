@@ -68,3 +68,8 @@ img{
     height: inherit;
     border-radius: 10px 10px 0px 0px;
 }
+
+#othercard{
+    width: 20px;
+    height: 20px;
+}
