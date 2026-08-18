@@ -10,6 +10,35 @@ let codes = [
     "McCall"
 ]
 
+const menuItems = [
+    {
+        name: "Full Rack Of Ribs",
+        menu: "Lunch",
+        price: 28.39
+    },
+    {
+        name: "The Big QP Burger",
+        menu: "Lunch",
+        price: 14.39
+    },
+    {
+        name: "Triple Dipper",
+        menu: "Lunch",
+        price: 17.59,
+        image: "assets/tD.avif"
+    },
+    {
+        name: "Bone-In Wings",
+        menu: "Lunch",
+        price: 17.79
+    },
+    {
+        name: "Boneless Wings",
+        menu: "Lunch",
+        price: 14.79,
+    }
+]
+
 const states = [
   "Alabama",
   "Alaska",
@@ -89,11 +118,15 @@ function applyCouponCode() {
             console.log("Coupon Applied");
         }
     }
-}
+};
 
 
 // Calculations
+function checkoutMath(obj) {
+    console.log(obj.name)
+}
 
+checkoutMath(menuItems[0]);
 
 
 
