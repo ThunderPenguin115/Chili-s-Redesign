@@ -10,6 +10,19 @@ let codes = [
     "McCall"
 ]
 
+let menuItems = [{
+    name: "Example",
+    menu: "Dinner",
+    price: 3.99,
+    image: ""
+}, {
+    name: "BEANS",
+    menu: "Lunch",
+    price: 8.99,
+    image: ""
+},
+];
+
 const states = [
   "Alabama",
   "Alaska",
