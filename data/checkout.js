@@ -152,7 +152,10 @@ function applyCouponCode() {
 
 
 // Calculations
-
+function checkoutMath(menuItem) {
+    console.log(menuItem.name)
+}
+checkoutMath()
 
 
 
