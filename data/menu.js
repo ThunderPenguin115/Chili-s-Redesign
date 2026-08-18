@@ -1,8 +1,8 @@
 const menuItems = [
     {
-        name: "Full Rack Of Ribs",
+        name: "Honey-Chipotle Chicken Crispers Combo",
         menu: "Lunch",
-        price: 28.39
+        price: 17.69
     },
     {
         name: "The Big QP Burger",
@@ -26,34 +26,34 @@ const menuItems = [
         price: 14.79,
     },
     {
-        name: "",
+        name: "The Original Trio",
         menu: "Dinner",
-        price: 14,
+        price: 26.49,
     },
     {
-        name: "",
+        name: "Full Rack Of Ribs",
         menu: "Dinner",
-        price: 14,
+        price: 28.39,
     },
     {
-        name: "",
+        name: "Triple Dipper",
         menu: "Dinner",
-        price: 14,
+        price: 17.59,
     },
     {
-        name: "",
+        name: "Bacon Cheeseburger",
         menu: "Dinner",
-        price: 14
+        price: 15.59
     },
     {
-        name: "",
+        name: "Bacon Rancher Burger",
         menu: "Dinner",
-        price: 14
+        price: 19.89
     },
     {
-        name: "",
+        name: "Nashville Hot Big Crispy Chicken Sandwich",
         menu: "Dinner",
-        price: 14
+        price: 15.99
     }
 ];
 
