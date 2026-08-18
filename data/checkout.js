@@ -10,7 +10,7 @@ let codes = [
     "McCall"
 ]
 
-const menuItems = [
+const menuItemsCheckout = [
     {
         name: "Full Rack Of Ribs",
         menu: "Lunch",
@@ -126,7 +126,7 @@ function checkoutMath(obj) {
     console.log(obj.name)
 }
 
-checkoutMath(menuItems[0]);
+checkoutMath(menuItemsCheckout[0]);
 
 
 
