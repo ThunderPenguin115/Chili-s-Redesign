@@ -10,17 +10,63 @@ let codes = [
     "McCall"
 ]
 
-let menuItems = [{
-    name: "Example",
-    menu: "Dinner",
-    price: 3.99,
-    image: ""
-}, {
-    name: "BEANS",
-    menu: "Lunch",
-    price: 8.99,
-    image: ""
-},
+const menuItems = [
+    {
+        name: "Full Rack Of Ribs",
+        menu: "Lunch",
+        price: 28.39
+    },
+    {
+        name: "The Big QP Burger",
+        menu: "Lunch",
+        price: 14.39
+    },
+    {
+        name: "Triple Dipper",
+        menu: "Lunch",
+        price: 17.59,
+        image: "assets/tD.avif"
+    },
+    {
+        name: "Bone-In Wings",
+        menu: "Lunch",
+        price: 17.79
+    },
+    {
+        name: "Boneless Wings",
+        menu: "Lunch",
+        price: 14.79,
+    },
+    {
+        name: "",
+        menu: "Dinner",
+        price: 14,
+    },
+    {
+        name: "",
+        menu: "Dinner",
+        price: 14,
+    },
+    {
+        name: "",
+        menu: "Dinner",
+        price: 14,
+    },
+    {
+        name: "",
+        menu: "Dinner",
+        price: 14
+    },
+    {
+        name: "",
+        menu: "Dinner",
+        price: 14
+    },
+    {
+        name: "",
+        menu: "Dinner",
+        price: 14
+    }
 ];
 
 const states = [
