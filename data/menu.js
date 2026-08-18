@@ -10,7 +10,6 @@ const menuItems = [
         price: 14.39
     },
     {
-<<<<<<< HEAD
         name: "Triple Dipper",
         menu: "Lunch",
         price: 17.59,
@@ -29,45 +28,32 @@ const menuItems = [
     {
         name: "",
         menu: "Dinner",
-        price: ,
+        price: 14,
     },
     {
         name: "",
         menu: "Dinner",
-        price: ,
+        price: 14,
     },
     {
         name: "",
         menu: "Dinner",
-        price: "",
-        image: 
+        price: 14,
     },
     {
         name: "",
         menu: "Dinner",
-        price: 
+        price: 14
     },
     {
         name: "",
         menu: "Dinner",
-        price: 
+        price: 14
     },
     {
         name: "",
         menu: "Dinner",
-        price: 
-=======
-        name : "Triple Dipper",
-        menu : "Lunch",
-        price : "17.59",
-        image : "assets/tD.avif"
-    },
-    {
-        name : "The Chipper",
-        menu : "Lunch",
-        price : "13.99",
-        image : "assets/tD.avif"
->>>>>>> 7f5e9b61f4a7e17bd28714ab19414ce873fb88bd
+        price: 14
     }
 ];
 
