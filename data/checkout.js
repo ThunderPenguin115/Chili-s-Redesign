@@ -36,38 +36,8 @@ const menuItems = [
         name: "Boneless Wings",
         menu: "Lunch",
         price: 14.79,
-    },
-    {
-        name: "",
-        menu: "Dinner",
-        price: 14,
-    },
-    {
-        name: "",
-        menu: "Dinner",
-        price: 14,
-    },
-    {
-        name: "",
-        menu: "Dinner",
-        price: 14,
-    },
-    {
-        name: "",
-        menu: "Dinner",
-        price: 14
-    },
-    {
-        name: "",
-        menu: "Dinner",
-        price: 14
-    },
-    {
-        name: "",
-        menu: "Dinner",
-        price: 14
     }
-];
+]
 
 const states = [
   "Alabama",
@@ -148,14 +118,15 @@ function applyCouponCode() {
             console.log("Coupon Applied");
         }
     }
-}
+};
 
 
 // Calculations
-function checkoutMath(menuItem) {
-    console.log(menuItem.name)
+function checkoutMath(obj) {
+    console.log(obj.name)
 }
-checkoutMath()
+
+checkoutMath(menuItems[0]);
 
 
 
