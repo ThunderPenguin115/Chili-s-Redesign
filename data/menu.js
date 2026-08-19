@@ -83,7 +83,7 @@ const menuItems = [
         price: 14.79,
         quantity: 1,
         Image: "../assets/tD.avif"
-    },
+        },
     {
         name: "The Original Trio",
         menu: "Dinner",
@@ -110,24 +110,19 @@ const menuItems = [
         menu: "Dinner",
         price: 15.59,
         quantity: 1,
-        Image: "../assets/tD.avif"
-    },
+        Image: "../assets/tD.avif"},
     {
         name: "Bacon Rancher Burger",
         menu: "Dinner",
         price: 19.89,
-        quantity: 1,
-        Image: "../assets/tD.avif"
+        quantity: 1
     },
     {
         name: "Nashville Hot Big Crispy Chicken Sandwich",
         menu: "Dinner",
         price: 15.99,
-        quantity: 1,
-        Image: "../assets/tD.avif"
+        quantity: 1
     }
-        
-    
 ];
 
 const breakfast = document.getElementById("breakfast");
