@@ -236,10 +236,15 @@ function applyCouponCode() {
 
 // Add to Cart
 
-function addCart(name){
-    
-    console.log("addCart was clicked")
-
+function addCart(a){
+    console.log("addCart was clicked");
+    // console.log(menuItems[0].name);
+    // console.log(a);
+    for (let i=0; i < menuItems.length; i++){
+        if(a === menuItems[i].name){
+            console.log(menuItems[i]);
+        }
+    }
 }
 
 
@@ -281,7 +286,7 @@ function checkoutMath(cart) {
 
 function start() {
     statesFormOptions();
-    checkoutMath(menuItemsCheckout)
+    checkoutMath(menuItems)
     addCart(name)
 }
 
