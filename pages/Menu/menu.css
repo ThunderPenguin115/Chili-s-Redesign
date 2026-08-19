@@ -61,7 +61,7 @@ div{
     align-items: center;
 }
 
-h3:hover{
+.addCart:hover{
     cursor: pointer;
 }
 
