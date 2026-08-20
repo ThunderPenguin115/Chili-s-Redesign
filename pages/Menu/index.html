@@ -1,101 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chili's Menu</title>
-    <link rel="stylesheet" href="../../shared/global.css">
-    <link rel="stylesheet" href="menu.css">
-    <script src="../../data/menu.js" defer></script>
-</head>
-<body>
-    <header>
-        <div class="left">
-            <img src="../../assets/logo.webp" alt="logo">
-            <a href="../../"><h3>Chilis</h3></a>
-            <a href="../Menu/"><h3>Menu</h3></a>
-            <a href="../Checkout/"><h3>Checkout</h3></a>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chili's Menu</title>
+        <link rel="stylesheet" href="../../shared/global.css">
+        <link rel="stylesheet" href="menu.css">
+    </head>
+    <body>
+        <header>
+            <div class="left">
+                <img src="../../assets/logo.webp" alt="logo">
+                <a href="../../"><h3>Chilis</h3></a>
+                <a href="../Menu/"><h3>Menu</h3></a>
+                <a href="../Checkout/"><h3>Checkout</h3></a>
+            </div>
 
-        <div class="right">
-            <search><input type="search" placeholder="search"></search>
-            <button id="cart"><img src="../../assets/cart.png" alt="cart"></button>
-        </div>
-    </header>
+            <div class="right">
+                <search><input type="search" placeholder="search"></search>
+                <button id="cart"><img src="../../assets/cart.png" alt="cart"></button>
+            </div>
+        </header>
 
-    <nav id="menu">
-        <h1>Chili's Menu</h1>
-        <div id="menu-options">
-            <h3 id="breakfast">Breakfast</h3>
-            <h3 id="lunch">Lunch</h3>
-            <h3 id="dinner">Dinner</h3>
-        </div>
-    </nav>
+        <nav id="menu">
+            <h1>Chili's Menu</h1>
+            <div id="menu-options">
+                <h3 id="breakfast">Breakfast</h3>
+                <h3 id="lunch">Lunch</h3>
+                <h3 id="dinner">Dinner</h3>
+            </div>
+        </nav>
 
-    <div id="container">
-        <div class="card">
-            <!-- Image will be display none untill added to the github. -->
-            <img src="../../assets/tD.avif" alt="">
-            <h1>Triple Dipper</h1>
-            <p>Chili's Triple Dipper puts the power in your hands - select three of your favorite apps, pair them with next-level sauces, and prepare to dig in!</p>
-            <div id="price">
-                <h3>Cost $10.99</h3>
-                <h3>Add To Cart</h3>
+        <div id="container">
+            <div class="card">
+                <!-- Image will be display none untill added to the github. -->
+                <img src="../../assets/tD.avif" alt="">
+                <h1>Triple Dipper</h1>
+                <p>Chili's Triple Dipper puts the power in your hands - select three of your favorite apps, pair them with next-level sauces, and prepare to dig in!</p>
+                <div id="price">
+                    <h3>Cost $10.99</h3>
+                    <button class="addCart" onclick="addCart(`Crepes`)">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Image will be display none untill added to the github. -->
+                <img src="../../assets/tD.avif" alt="">
+                <h1>Triple Dipper</h1>
+                <p>Chili's Triple Dipper puts the power in your hands - select three of your favorite apps, pair them with next-level sauces, and prepare to dig in!</p>
+                <div id="price">
+                    <h3>Cost $10.99</h3>
+                    <button class="addCart" onclick="addCart(`Crepes`)">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Image will be display none untill added to the github. -->
+                <img src="../../assets/tD.avif" alt="">
+                <h1>Triple Dipper</h1>
+                <p>Chili's Triple Dipper puts the power in your hands - select three of your favorite apps, pair them with next-level sauces, and prepare to dig in!</p>
+                <div id="price">
+                    <h3>Cost $10.99</h3>
+                    <button class="addCart" onclick="addCart(`Crepes`)">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Image will be display none untill added to the github. -->
+                <img src="../../assets/tD.avif" alt="">
+                <h1>Triple Dipper</h1>
+                <p>Chili's Triple Dipper puts the power in your hands - select three of your favorite apps, pair them with next-level sauces, and prepare to dig in!</p>
+                <div id="price">
+                    <h3>Cost $10.99</h3>
+                    <button class="addCart" onclick="addCart(`Crepes`)">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Image will be display none untill added to the github. -->
+                <img src="../../assets/tD.avif" alt="">
+                <h1>Triple Dipper</h1>
+                <p>Chili's Triple Dipper puts the power in your hands - select three of your favorite apps, pair them with next-level sauces, and prepare to dig in!</p>
+                <div id="price">
+                    <h3>Cost $10.99</h3>
+                    <button class="addCart" onclick="addCart(`Triple Dipper`)">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Image will be display none untill added to the github. -->
+                <img src="../../assets/tD.avif" alt="">
+                <h1>Triple Dipper</h1>
+                <p>Chili's Triple Dipper puts the power in your hands - select three of your favorite apps, pair them with next-level sauces, and prepare to dig in!</p>
+                <div id="price">
+                    <h3>Cost $10.99</h3>
+                    <button class="addCart" onclick="addCart(`Crepes`)">Add To Cart</button>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <!-- Image will be display none untill added to the github. -->
-            <img src="../../assets/tD.avif" alt="">
-            <h1>Triple Dipper</h1>
-            <p>Chili's Triple Dipper puts the power in your hands - select three of your favorite apps, pair them with next-level sauces, and prepare to dig in!</p>
-            <div id="price">
-                <h3>Cost $10.99</h3>
-                <h3>Add To Cart</h3>
-            </div>
-        </div>
-        <div class="card">
-            <!-- Image will be display none untill added to the github. -->
-            <img src="../../assets/tD.avif" alt="">
-            <h1>Triple Dipper</h1>
-            <p>Chili's Triple Dipper puts the power in your hands - select three of your favorite apps, pair them with next-level sauces, and prepare to dig in!</p>
-            <div id="price">
-                <h3>Cost $10.99</h3>
-                <h3>Add To Cart</h3>
-            </div>
-        </div>
-        <div class="card">
-            <!-- Image will be display none untill added to the github. -->
-            <img src="../../assets/tD.avif" alt="">
-            <h1>Triple Dipper</h1>
-            <p>Chili's Triple Dipper puts the power in your hands - select three of your favorite apps, pair them with next-level sauces, and prepare to dig in!</p>
-            <div id="price">
-                <h3>Cost $10.99</h3>
-                <h3>Add To Cart</h3>
-            </div>
-        </div>
-        <div class="card">
-            <!-- Image will be display none untill added to the github. -->
-            <img src="../../assets/tD.avif" alt="">
-            <h1>Triple Dipper</h1>
-            <p>Chili's Triple Dipper puts the power in your hands - select three of your favorite apps, pair them with next-level sauces, and prepare to dig in!</p>
-            <div id="price">
-                <h3>Cost $10.99</h3>
-                <h3>Add To Cart</h3>
-            </div>
-        </div>
-        <div class="card">
-            <!-- Image will be display none untill added to the github. -->
-            <img src="../../assets/tD.avif" alt="">
-            <h1>Triple Dipper</h1>
-            <p>Chili's Triple Dipper puts the power in your hands - select three of your favorite apps, pair them with next-level sauces, and prepare to dig in!</p>
-            <div id="price">
-                <h3>Cost $10.99</h3>
-                <h3>Add To Cart</h3>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <p> &copy;2026 Xavier Guerrero, Matthew Beuno, & Pedro Arvayo</p>
-    </footer>
-</body>
+        <footer>
+            <p> &copy;2026 Xavier Guerrero, Matthew Beuno, & Pedro Arvayo</p>
+        </footer>
+
+        <script src="../../data/menu.js"></script>
+        <script src="../../data/checkout.js"></script>
+    </body>
 </html>

@@ -61,7 +61,7 @@ div{
     align-items: center;
 }
 
-h3:hover{
+.addCart:hover{
     cursor: pointer;
 }
 
@@ -74,4 +74,21 @@ img{
 #othercard{
     width: 20px;
     height: 20px;
+}
+
+button{
+    width: 200px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    border-radius: 20px;
+}
+
+button:hover{
+    color: grey;
+    background: rgb(244, 244, 244);
+}
+
+button:active{
+    color: black;
 }
