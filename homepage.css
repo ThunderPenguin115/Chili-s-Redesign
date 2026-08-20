@@ -1,21 +1,26 @@
 .heroSection{
-    background-image: url("assets/heroImg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+    width: 100%;
+    margin: 0px 10px;
+    overflow: hidden;
+}
+#heroImg{
+    height: 700px;
+    width: 1000px;
 }
 main h2{
     text-align: center;
+    background-color: var(--backgroundMain);
 }
 .featured{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    background-color: var(--buttons);
 }
 .featuredItems{
     display: flex;
     flex-direction: column;
-    background-color: #F5E9E2;
+    background-color: var(--backgroundMain);
     width: 200px;
     height: 225px;
     padding: 5px;

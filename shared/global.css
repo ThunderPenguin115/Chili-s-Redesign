@@ -1,3 +1,11 @@
+:root{
+    --buttons: #EE3124;
+    --background: #2E294E;
+    --text: #000000;
+    --accents: #749E33;
+    --sections: #231F20;
+    --backgroundMain: #F5E9E2;
+}
 *{
     margin: 0;
     padding: 0;
@@ -21,7 +29,7 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #F5E9E2;
+    background-color: var(--backgroundMain);
 }
 a h3{
     color: black;
@@ -58,7 +66,7 @@ a h3{
     cursor: pointer;
 }
 #cart:active{
-    background-color: #33Ef33;
+    background-color: var(--accents);
 
 }
 br{
