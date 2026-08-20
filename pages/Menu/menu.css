@@ -11,6 +11,7 @@ div{
 }
 
 #menu{
+    background: #EE3124;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,14 +23,16 @@ div{
 }
 
 #container{
-    margin: 0px 0px 10px 0px;
     display: grid;
     grid-template-columns: repeat(3, 30%);
     flex-grow: 1;
+    background: #EE3124;
+    margin-top: 0;
 }
 
 .card{
     border: 1px solid #000;
+    background: #F5E9E2;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -67,7 +70,7 @@ div{
 
 img{
     width: 100%;
-    height: 50%;
+    height: 40%;
     border-radius: 10px 10px 0px 0px;
 }
 
