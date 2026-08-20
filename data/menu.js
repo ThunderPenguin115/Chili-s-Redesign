@@ -18,28 +18,28 @@ const menuItems = [
         menu: "Breakfast",
         price: 14.99,
         quantity: 1,
-        Image: "../../assets/tD.avif"
+        Image: "../../assets/crepes.webp"
     },
     {
         name: "French Toast",
         menu: 'Breakfast',
         price: 14.59,
         quantity: 1,
-        Image: "../../assets/tD.avif"
+        Image: "../../assets/frenchtoast.jpg"
     },
     {
         name: "Cinnamamon Buns",
         menu: "Breakfast",
         price: 17.99,
         quantity: 1,
-        Image: "../../assets/tD.avif"
+        Image: "../../assets/cinnamamonbuns.jpg"
     },
     {
-        name: "Briper",
+        name: "Bripper",
         menu: "Breakfast",
         price: 25.59,
         quantity: 1,
-        Image: "../../assets/tD.avif"
+        Image: "../../assets/bripper.png"
     },
     {
         name: "Honey-Chipotle Chicken Crispers Combo",
