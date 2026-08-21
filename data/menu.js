@@ -164,7 +164,7 @@ function displayMenu(menu) {
             <p>${item.description}</p>
             <div id="price">
                 <h3> Cost $${item.price}</h3>
-                <button>Add To Cart</button>
+                <button class="addCart" onclick="addCart('${item.name}')">Add To Cart</button>
             </div>
         </div>
         `
