@@ -75,17 +75,23 @@ const states = [
 ];
 
 
+let globalCart = [];
+
+
 
 // Local Storage
-let cart = localStorage.setItem('cartStorage', JSON.stringify(menuItems));
-
 
 const storedMenu = localStorage.getItem('cartStorage');
 const cartArray = JSON.parse(storedMenu);
 
-console.log(cartStorage);
+
 
 function cart(){
+    console.log(globalCart);
+
+    localStorage.setItem('cartStorage', JSON.stringify(globalCart));
+
+
     
 }
 
@@ -146,6 +152,7 @@ function start() {
     statesFormOptions();
     checkoutMath(menuItems)
     addCart(name)
+    cart()
 }
 
 start();
