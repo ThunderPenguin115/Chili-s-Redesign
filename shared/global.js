@@ -1,2 +1,7 @@
-localStorage.setItem("key", "value")
+localStorage.setItem("theme", "value")
 localStorage.getItem("key")
+
+function theme(){
+
+}
+
