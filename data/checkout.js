@@ -81,17 +81,22 @@ let globalCart = [];
 
 // Local Storage
 
-const storedMenu = localStorage.getItem('cartStorage');
-const cartArray = JSON.parse(storedMenu);
 
 
 
-function cart(){
+
+function setCart(){
     console.log(globalCart);
 
     localStorage.setItem('cartStorage', JSON.stringify(globalCart));
+}
 
+function grabCart(){
+    let storedMenu = JSON.parse(localStorage.getItem('cartStorage'));
 
+    for (let i =0; i <=1; i++){
+    
+    }
     
 }
 
