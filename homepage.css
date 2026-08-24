@@ -3,8 +3,14 @@
     overflow: hidden;
 }
 #heroImg{
-    height: 700px;
-    width: 1000px;
+    height: 1250px;
+    width: 1500px;
+    display: block;
+}
+.heroWords{
+    margin: -100px 0px 0px 0px;
+    color: var(--accents);
+    top: 0;
 }
 main h2{
     text-align: center;
