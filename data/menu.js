@@ -52,7 +52,7 @@ const menuItems = [
         menu: "Lunch",
         price: 17.69,
         quantity: 1,
-        Image: "../../assets/tD.avif",
+        Image: "../../assets/honeychipotlechickencrispers.jpg",
         description: "Crispy, golden chicken crispers tossed in a sweet and smoky honey-chipotle sauce, served with your choice of sides and dipping sauce. 🍯🌶️🍗"
     },
     {
@@ -60,7 +60,7 @@ const menuItems = [
         menu: "Lunch",
         price: 14.39,
         quantity: 1,
-        Image: "../../assets/tD.avif",
+        Image: "../../assets/thebigqpburger.jpg",
         description: "A juicy, mouthwatering burger stacked with a seasoned beef patty, melty cheese, fresh toppings, and signature sauce, all tucked into a toasted bun. 🍔🧀🥬"
     },
     {
@@ -76,7 +76,7 @@ const menuItems = [
         menu: "Lunch",
         price: 17.79,
         quantity: 1,
-        Image: "../../assets/tD.avif",
+        Image: "../../assets/boneinwings.jpg",
         description: "Crispy, juicy bone-in wings tossed in your choice of bold, flavorful sauce, served hot and ready to satisfy every craving. 🍗🔥"
     },
     {
@@ -84,7 +84,7 @@ const menuItems = [
         menu: "Lunch",
         price: 14.79,
         quantity: 1,
-        Image: "../../assets/tD.avif",
+        Image: "../../assets/bonelesswings.jpg",
         description: "Tender, crispy boneless wings tossed in your choice of bold, flavorful sauce, served hot with a side of creamy dipping sauce. 🍗🔥"
     },
     {
@@ -92,7 +92,7 @@ const menuItems = [
         menu: "Lunch",
         price: 14.79,
         quantity: 1,
-        Image: "../../assets/tD.avif",
+        Image: "../../assets/nashvillehotchickencrispers.jpg",
         description: "Crispy, golden chicken crispers tossed in a fiery Nashville hot seasoning, served with your choice of sides and a cool dipping sauce. 🌶️🍗🔥"
     },
     {
@@ -100,7 +100,7 @@ const menuItems = [
         menu: "Dinner",
         price: 26.49,
         quantity: 1,
-        Image: "../../assets/tD.avif",
+        Image: "../../assets/theoriginaltrio.jpg",
         description: "A delicious trio of classic favorites, featuring crispy chicken crispers, savory mozzarella sticks, and golden Southwestern egg rolls, served with dipping sauces. 🍗🧀🌯"
     },
     {
@@ -108,23 +108,23 @@ const menuItems = [
         menu: "Dinner",
         price: 28.39,
         quantity: 1,
-        Image: "../../assets/tD.avif",
+        Image: "../../assets/fullrackofribs.jpg",
         description: "A full rack of tender, fall-off-the-bone ribs glazed in smoky, savory BBQ sauce and slow-cooked to juicy perfection. 🍖🔥"
     },
     {
-        name: "Triple Dipper",
+        name: "The Stuff",
         menu: "Dinner",
         price: 17.59,
         quantity: 1,
-        Image: "../../assets/tD.avif",
-        description: ""
+        Image: "../../assets/thestuff.jpg",
+        description: "A strange, savory concoction packed with rich spices and an addictive kick. One bite sends a warm rush through your body, leaving you feeling stronger, faster, and ready to take on anything lurking in the darkness. 🔥"
     },
     {
         name: "Bacon Cheeseburger",
         menu: "Dinner",
         price: 15.59,
         quantity: 1,
-        Image: "../../assets/tD.avif",
+        Image: "../../assets/baconburger.jpg",
         description: ""
     },
     {
@@ -132,7 +132,7 @@ const menuItems = [
         menu: "Dinner",
         price: 19.89,
         quantity: 1,
-        Image: "../../assets/tD.avif",
+        Image: "../../assets/baconrancherburger.jpg",
         description: ""
     },
     {
@@ -140,7 +140,7 @@ const menuItems = [
         menu: "Dinner",
         price: 15.99,
         quantity: 1,
-        Image: "../../assets/tD.avif",
+        Image: "../../assets/nashvillehotbigcrispychickensandwich.jpg",
         description: ""
     }
 ];
@@ -183,3 +183,8 @@ dinner.addEventListener("click", function(){
     displayMenu("Dinner")
 })
 
+function setCart(){
+    console.log(globalCart);
+
+    localStorage.setItem('cartStorage', JSON.stringify(globalCart));
+}
