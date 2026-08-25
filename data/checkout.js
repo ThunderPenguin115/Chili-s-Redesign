@@ -3,6 +3,8 @@ apply.setAttribute("onClick", "applyCouponCode()");
 
 let total = document.getElementById("totalPrice")
 
+
+
 const coupons = [
     {
         code: "apply",
@@ -19,7 +21,7 @@ const coupons = [
 ];
 
 const taxRate = 0.08; // 8% tax
-const deliveryFee = 3.99;
+const deliveryFee = 5;
 
 const states = [
   "Alabama",
@@ -83,24 +85,51 @@ let globalCart = [];
 
 
 
-
-
 function setCart(){
     console.log(globalCart);
 
     localStorage.setItem('cartStorage', JSON.stringify(globalCart));
 }
 
-function grabCart(){
-    let storedMenu = JSON.parse(localStorage.getItem('cartStorage'));
+function grabCart() {
+    const storedCart = JSON.parse(localStorage.getItem("cartStorage"));
 
-    for (let i =0; i <=1; i++){
-    
+    if (storedCart) {
+        globalCart = storedCart;
     }
-    
+
+    console.log("Loaded cart:", globalCart);
+}
+
+function displayCart() {
+    const cartContainer = document.querySelector(".cart");
+
+    cartContainer.innerHTML = "";
+
+    if (globalCart.length === 0) {
+        cartContainer.innerHTML = "<h2>Your cart is empty</h2>";
+        return;
+    }
+
+    globalCart.forEach(function(item) {
+        cartContainer.innerHTML += `
+            <div class="cart-items">
+                <img class="checkoutImage" src="${item.Image}" alt="${item.name}">
+                <h2>${item.name}</h2>
+                <div class="checkoutItemText">
+                <p>Price: $${item.price.toFixed(2)}</p>
+                <p>Quantity: ${item.quantity}</p>
+                <p>Subtotal: $${(item.price * item.quantity).toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+    });
 }
 
 
+
+
+grabCart();
 
 // States options
 function statesFormOptions(){
@@ -132,16 +161,41 @@ function applyCouponCode() {
 
 // Add to Cart
 
-function addCart(a){
-    console.log("addCart was clicked");
-    // console.log(menuItems[0].name);
-    // console.log(a);
-    for (let i=0; i < menuItems.length; i++){
-        if(a === menuItems[i].name){
-            console.log(menuItems[i]);
-        }
+function addCart(itemName) {
+    console.log("Adding:", itemName);
 
+    // Find the item in menuItems
+    const item = menuItems.find(function(menuItem) {
+        return menuItem.name === itemName;
+    });
+
+    if (!item) {
+        console.log("Item not found:", itemName);
+        return;
     }
+
+    // Check if item is already in cart
+    const existingItem = globalCart.find(function(cartItem) {
+        return cartItem.name === itemName;
+    });
+
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        globalCart.push({
+            name: item.name,
+            menu: item.menu,
+            price: item.price,
+            quantity: 1,
+            Image: item.Image,
+            description: item.description
+        });
+    }
+
+    // Save cart so Checkout can access it
+    setCart();
+
+    console.log("Cart:", globalCart);
 }
 
 
@@ -149,15 +203,40 @@ function addCart(a){
 function checkoutMath(cart) {
     let subtotal = 0;
 
+    // Add up every item in the cart
+    cart.forEach(function(item) {
+        subtotal += item.price * item.quantity;
+    });
 
+    // Calculate tax
+    let tax = subtotal * taxRate;
+
+    // Add delivery fee
+    let total = subtotal + tax + deliveryFee;
+
+    // Display the total
+    document.getElementById("totalPrice").innerHTML = `
+        <div class = "calc">
+        <p>Subtotal: $${subtotal.toFixed(2)}</p>
+        <p>Tax: $${tax.toFixed(2)}</p>
+        <p>Delivery: $${deliveryFee.toFixed(2)}</p>
+        </div>
+        <h2>Total: $${total.toFixed(2)}</h2>
+        
+    `;
+
+    console.log("Subtotal:", subtotal);
+    console.log("Tax:", tax);
+    console.log("Delivery:", deliveryFee);
+    console.log("Total:", total);
 }
 
 
 function start() {
+    grabCart();
     statesFormOptions();
-    checkoutMath(menuItems)
-    addCart(name)
-    cart()
+    displayCart();
+    checkoutMath(globalCart);
 }
 
 start();

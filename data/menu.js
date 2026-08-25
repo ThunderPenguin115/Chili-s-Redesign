@@ -183,6 +183,21 @@ dinner.addEventListener("click", function(){
     displayMenu("Dinner")
 })
 
+function displayMenuByTime(){
+    const hour = new Date().getHours();
+
+    if (hour >= 6 && hour < 11){
+        displayMenu("Breakfast");
+    } else if (hour >= 11 && hour < 17){
+            displayMenu("Lunch")
+        }
+        else{
+            displayMenu("Dinner")
+        }
+}
+
+displayMenuByTime();
+
 function setCart(){
     console.log(globalCart);
 
