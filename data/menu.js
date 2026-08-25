@@ -188,3 +188,5 @@ function setCart(){
 
     localStorage.setItem('cartStorage', JSON.stringify(globalCart));
 }
+
+

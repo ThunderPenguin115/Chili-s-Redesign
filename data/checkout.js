@@ -194,6 +194,11 @@ function addCart(itemName) {
 
     // Save cart so Checkout can access it
     setCart();
+    const sidebar = document.getElementById("cart-sidebar");
+
+if (sidebar && sidebar.classList.contains("open")) {
+    displaySideCart();
+}
 
     console.log("Cart:", globalCart);
 }
