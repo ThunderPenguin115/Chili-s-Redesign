@@ -3,14 +3,20 @@
     overflow: hidden;
 }
 #heroImg{
-    height: 1250px;
+    height: 650px;
     width: 1500px;
     display: block;
 }
 .heroWords{
-    margin: -100px 0px 0px 0px;
+    margin: -80px 0px 0px 0px;
     color: var(--accents);
     top: 0;
+}
+.heroBtns a{
+    margin: -150px 0px 0px 0px;
+    background-color: var(--buttons);
+    border-radius: 15%;
+    color: white;
 }
 main h2{
     text-align: center;
