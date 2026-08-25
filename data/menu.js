@@ -169,19 +169,19 @@ function displayMenu(menu) {
         </div>
         `
     })
-}
+};
 
 breakfast.addEventListener("click", function(){
     displayMenu("Breakfast")
-})
+});
 
 lunch.addEventListener("click", function(){
     displayMenu("Lunch")
-})
+});
 
 dinner.addEventListener("click", function(){
     displayMenu("Dinner")
-})
+});
 
 function displayMenuByTime(){
     const hour = new Date().getHours();
@@ -189,17 +189,17 @@ function displayMenuByTime(){
     if (hour >= 6 && hour < 11){
         displayMenu("Breakfast");
     } else if (hour >= 11 && hour < 17){
-            displayMenu("Lunch")
-        }
-        else{
-            displayMenu("Dinner")
-        }
-}
+            displayMenu("Lunch");
+    }else{
+        displayMenu("Dinner");
+    }
+};
 
 displayMenuByTime();
 
 function setCart(){
+    addCart.push(globalCart);
     console.log(globalCart);
 
     localStorage.setItem('cartStorage', JSON.stringify(globalCart));
-}
+};
