@@ -79,3 +79,56 @@ footer{
     background-color: #2E294E;
     color: white;
 }
+
+
+
+/* DARK THEME */
+.dark-theme {
+    --buttons: #8B1E18;
+    --background: #121212;
+    --text: #FFFFFF;
+    --accents: #749E33;
+    --sections: #1E1E1E;
+    --backgroundMain: #242424;
+}
+
+.dark-theme body {
+    background-color: var(--backgroundMain);
+    color: var(--text);
+}
+
+.dark-theme header {
+    background-color: var(--backgroundMain);
+}
+
+.dark-theme a h3 {
+    color: var(--text);
+}
+
+.dark-theme main h2 {
+    background-color: var(--backgroundMain);
+    color: var(--text);
+}
+
+.dark-theme .featured {
+    background-color: var(--buttons);
+}
+
+.dark-theme .featuredItems {
+    background-color: var(--backgroundMain);
+    color: var(--text);
+}
+
+#themeSwitch {
+    background-color: var(--buttons);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#themeSwitch:hover {
+    opacity: 0.8;
+}
