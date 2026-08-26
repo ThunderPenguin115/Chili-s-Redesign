@@ -27,3 +27,78 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cartButton = document.getElementById("cart");
+    const sidebar = document.getElementById("cart-sidebar");
+    const closeButton = document.getElementById("close-cart");
+    const checkoutButton = document.getElementById("go-to-checkout");
+
+    // Open cart
+    if (cartButton && sidebar) {
+        cartButton.addEventListener("click", function () {
+            sidebar.classList.add("open");
+            displaySideCart();
+        });
+    }
+
+    // Close cart
+    if (closeButton && sidebar) {
+        closeButton.addEventListener("click", function () {
+            sidebar.classList.remove("open");
+        });
+    }
+
+    // Go to checkout
+    if (checkoutButton) {
+        checkoutButton.addEventListener("click", function () {
+            window.location.href = "/pages/Checkout/";
+        });
+    }
+
+    displaySideCart();
+});
+
+
+
+function displaySideCart() {
+
+    const container = document.getElementById("side-cart-items");
+    const totalElement = document.getElementById("side-cart-total");
+
+    if (!container) {
+        return;
+    }
+
+    let cart = JSON.parse(localStorage.getItem("cartStorage")) || [];
+
+    container.innerHTML = "";
+
+    if (cart.length === 0) {
+        container.innerHTML = "<p>Your cart is empty.</p>";
+        totalElement.textContent = "Total: $0.00";
+        return;
+    }
+
+    let total = 0;
+
+    cart.forEach(function(item) {
+
+        let subtotal = item.price * item.quantity;
+
+        total += subtotal;
+
+        container.innerHTML += `
+            <div class="side-cart-item">
+                <h3>${item.name}</h3>
+                <p>Price: $${item.price.toFixed(2)}</p>
+                <p>Quantity: ${item.quantity}</p>
+                <p>Subtotal: $${subtotal.toFixed(2)}</p>
+            </div>
+        `;
+    });
+
+    totalElement.textContent = `Total: $${total.toFixed(2)}`;
+}
