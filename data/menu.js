@@ -202,4 +202,4 @@ function setCart(){
     console.log(globalCart);
 
     localStorage.setItem('cartStorage', JSON.stringify(globalCart));
-};
+}
