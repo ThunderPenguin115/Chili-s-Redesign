@@ -28,7 +28,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    overflow-y: scroll;    
+    overflow-y: auto;    
     border-radius: 25px;
 }
 
