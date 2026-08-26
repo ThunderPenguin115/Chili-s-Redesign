@@ -3,8 +3,6 @@ apply.setAttribute("onClick", "applyCouponCode()");
 
 let total = document.getElementById("totalPrice")
 
-
-
 const coupons = [
     {
         code: "apply",
@@ -125,9 +123,6 @@ function displayCart() {
     });
 }
 
-
-
-
 grabCart();
 
 // States options
@@ -139,7 +134,6 @@ function statesFormOptions(){
         option.setAttribute('value', 'states');
         formSelectStates.append(option);
     }
-    
 }
 
 // Coupon Codes
