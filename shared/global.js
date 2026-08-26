@@ -99,7 +99,8 @@ function displaySideCart() {
                 <h3>${item.name}</h3>
                 <p>Price: $${item.price.toFixed(2)}</p>
                 <p>Quantity: ${item.quantity}</p>
-                <p>Subtotal: $${subtotal.toFixed(2)}</p>
+                <img class="checkoutImage" src="${item.Image}" alt="${item.name}">
+                
             </div>
         `;
     });
