@@ -1,3 +1,7 @@
+let globalCart = [];
+
+
+
 function theme() {
     const root = document.documentElement;
 

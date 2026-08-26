@@ -75,7 +75,7 @@ const states = [
 ];
 
 
-let globalCart = [];
+
 
 
 
@@ -138,19 +138,27 @@ function statesFormOptions(){
 
 // Coupon Codes
 function applyCouponCode() {
-    // console.log("Coupon code applied");
+    let code = document.getElementById("potentialCode").value.trim();
 
-    let pc = document.getElementById("potentialCode").value;
-    
-    // console.log(pc.value)
-    
+    let discount = 0;
 
-    for(let i = 0; i < coupons.length; i++) {
-        if(pc == coupons[i]) {
-            console.log("Coupon Applied");
+    for (let i = 0; i < coupons.length; i++) {
+        if (code.toLowerCase() === coupons[i].code.toLowerCase()) {
+            discount = coupons[i].discount;
+            break;
         }
     }
-};
+
+    if (discount > 0) {
+        localStorage.setItem("couponDiscount", discount);
+        alert(discount + "% discount applied!");
+    } else {
+        localStorage.removeItem("couponDiscount");
+        alert("Invalid coupon code.");
+    }
+
+    checkoutMath(globalCart);
+}
 
 // Add to Cart
 
@@ -201,32 +209,31 @@ if (sidebar && sidebar.classList.contains("open")) {
 function checkoutMath(cart) {
     let subtotal = 0;
 
-    // Add up every item in the cart
     cart.forEach(function(item) {
         subtotal += item.price * item.quantity;
     });
 
-    // Calculate tax
-    let tax = subtotal * taxRate;
+    let discountPercent =
+        Number(localStorage.getItem("couponDiscount")) || 0;
 
-    // Add delivery fee
-    let total = subtotal + tax + deliveryFee;
+    let discountAmount = subtotal * (discountPercent / 100);
 
-    // Display the total
+    let discountedSubtotal = subtotal - discountAmount;
+
+    let tax = discountedSubtotal * taxRate;
+
+    let total = discountedSubtotal + tax + deliveryFee;
+
     document.getElementById("totalPrice").innerHTML = `
-        <div class = "calc">
-        <p>Subtotal: $${subtotal.toFixed(2)}</p>
-        <p>Tax: $${tax.toFixed(2)}</p>
-        <p>Delivery: $${deliveryFee.toFixed(2)}</p>
+        <div class="calc">
+            <p>Subtotal: $${subtotal.toFixed(2)}</p>
+            <p>Discount: -$${discountAmount.toFixed(2)}</p>
+            <p>Tax: $${tax.toFixed(2)}</p>
+            <p>Delivery: $${deliveryFee.toFixed(2)}</p>
         </div>
-        <h2>Total: $${total.toFixed(2)}</h2>
-        
-    `;
 
-    console.log("Subtotal:", subtotal);
-    console.log("Tax:", tax);
-    console.log("Delivery:", deliveryFee);
-    console.log("Total:", total);
+        <h2>Total: $${total.toFixed(2)}</h2>
+    `;
 }
 
 
