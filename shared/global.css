@@ -30,6 +30,8 @@ header{
     display: flex;
     justify-content: space-between;
     background-color: var(--backgroundMain);
+    padding: 15px 0px;
+    gap: 750px;
 }
 a h3{
     color: black;
