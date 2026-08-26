@@ -198,7 +198,7 @@ function displayMenuByTime(){
 displayMenuByTime();
 
 function setCart(){
-    addCart.push(globalCart);
+    globalCart.push('${item.name}');
     console.log(globalCart);
 
     localStorage.setItem('cartStorage', JSON.stringify(globalCart));

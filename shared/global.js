@@ -1,7 +1,5 @@
 let globalCart = [];
 
-
-
 function theme() {
     const root = document.documentElement;
 
@@ -106,4 +104,46 @@ function displaySideCart() {
     });
 
     totalElement.textContent = `Total: $${total.toFixed(2)}`;
+}
+
+function addCart(itemName) {
+    console.log("Adding:", itemName);
+
+    // Find the item in menuItems
+    const item = menuItems.find(function(menuItem) {
+        return menuItem.name === itemName;
+    });
+
+    if (!item) {
+        console.log("Item not found:", itemName);
+        return;
+    }
+
+    // Check if item is already in cart
+    const existingItem = globalCart.find(function(cartItem) {
+        return cartItem.name === itemName;
+    });
+
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        globalCart.push({
+            name: item.name,
+            menu: item.menu,
+            price: item.price,
+            quantity: 1,
+            Image: item.Image,
+            description: item.description
+        });
+    }
+
+    // Save cart so Checkout can access it
+    setCart();
+    const sidebar = document.getElementById("cart-sidebar");
+
+if (sidebar && sidebar.classList.contains("open")) {
+    displaySideCart();
+}
+
+    console.log("Cart:", globalCart);
 }
