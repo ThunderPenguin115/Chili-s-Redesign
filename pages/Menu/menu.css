@@ -24,6 +24,7 @@ div{
 
 #container{
     display: grid;
+    justify-content: space-between;
     grid-template-columns: repeat(3, 30%);
     flex-grow: 1;
     background: #EE3124;
