@@ -125,7 +125,7 @@ const menuItems = [
         price: 15.59,
         quantity: 1,
         Image: "../../assets/baconburger.jpg",
-        description: ""
+        description: "A juicy, seasoned beef patty topped with crispy bacon, melted cheddar cheese, fresh lettuce, ripe tomato, and onions, all stacked on a toasted brioche bun."
     },
     {
         name: "Bacon Rancher Burger",
@@ -133,7 +133,7 @@ const menuItems = [
         price: 19.89,
         quantity: 1,
         Image: "../../assets/baconrancherburger.jpg",
-        description: ""
+        description: "A juicy beef patty topped with crispy bacon, melted cheddar cheese, fresh lettuce, tomato, and creamy ranch, served on a toasted brioche bun for the perfect savory and smoky bite."
     },
     {
         name: "Nashville Hot Big Crispy Chicken Sandwich",
@@ -141,7 +141,7 @@ const menuItems = [
         price: 15.99,
         quantity: 1,
         Image: "../../assets/nashvillehotbigcrispychickensandwich.jpg",
-        description: ""
+        description: "Crispy fried chicken tossed in Nashville hot sauce, topped with fresh lettuce, pickles, and creamy ranch, all served on a toasted brioche bun for a spicy, crunchy, and flavorful bite."
     }
 ];
 
