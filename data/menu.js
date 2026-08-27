@@ -197,9 +197,82 @@ function displayMenuByTime(){
 
 displayMenuByTime();
 
-function setCart(){
-    globalCart.push('${item.name}');
-    console.log(globalCart);
+function addCart(itemName) {
+    let cart = JSON.parse(localStorage.getItem("cartStorage")) || [];
 
-    localStorage.setItem('cartStorage', JSON.stringify(globalCart));
+    const menuItem = menuItems.find(function(item) {
+        return item.name === itemName;
+    });
+
+    if (!menuItem) {
+        console.error("Item not found:", itemName);
+        return;
+    }
+
+    // Check if item is already in cart
+    const existingItem = cart.find(function(item) {
+        return item.name === itemName;
+    });
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            name: menuItem.name,
+            price: menuItem.price,
+            Image: menuItem.Image,
+            quantity: 1
+        });
+    }
+
+    localStorage.setItem("cartStorage", JSON.stringify(cart));
+
+    console.log("Cart:", cart);
+
+    // Update sidebar
+    displaySideCart();
+}
+
+function displaySideCart() {
+    const sideCart = document.getElementById("side-cart-items");
+    const sideTotal = document.getElementById("side-cart-total");
+
+    if (!sideCart) return;
+
+    const cart = JSON.parse(localStorage.getItem("cartStorage")) || [];
+
+    // Clear the sidebar first
+    sideCart.innerHTML = "";
+
+    if (cart.length === 0) {
+        sideCart.innerHTML = "<p>Your cart is empty.</p>";
+        sideTotal.textContent = "Total: $0.00";
+        return;
+    }
+
+    let total = 0;
+
+    // Add EVERY item
+    cart.forEach(function(item) {
+        const price = Number(item.price) || 0;
+        const quantity = Number(item.quantity) || 0;
+        const subtotal = price * quantity;
+
+        total += subtotal;
+
+        sideCart.innerHTML += `
+            <div class="side-cart-item">
+                <img src="${item.Image}" alt="${item.name}">
+
+                <div class="side-cart-item-info">
+                    <h3>${item.name}</h3>
+                    <p>Price: $${price.toFixed(2)}</p>
+                    <p>Quantity: ${quantity}</p>
+                    <p>Subtotal: $${subtotal.toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+    });
+
+    sideTotal.textContent = `Total: $${total.toFixed(2)}`;
 }

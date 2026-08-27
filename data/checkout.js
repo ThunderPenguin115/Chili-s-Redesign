@@ -103,20 +103,45 @@ function displayCart() {
 
     cartContainer.innerHTML = "";
 
+    // Remove invalid/undefined cart items
+    globalCart = globalCart.filter(function(item) {
+        return (
+            item &&
+            item.name &&
+            item.price !== undefined &&
+            item.Image &&
+            item.quantity > 0
+        );
+    });
+
+    // Save cart
+    setCart();
+
     if (globalCart.length === 0) {
         cartContainer.innerHTML = "<h2>Your cart is empty</h2>";
         return;
     }
 
     globalCart.forEach(function(item) {
+
+        const price = Number(item.price);
+        const quantity = Number(item.quantity);
+        const subtotal = price * quantity;
+
         cartContainer.innerHTML += `
             <div class="cart-items">
-                <img class="checkoutImage" src="${item.Image}" alt="${item.name}">
+                <img 
+                    class="checkoutImage" 
+                    src="${item.Image}" 
+                    alt="${item.name}"
+                >
+
                 <h2>${item.name}</h2>
+
                 <div class="checkoutItemText">
-                <p>Price: $${item.price.toFixed(2)}</p>
-                <p>Quantity: ${item.quantity}</p>
-                <p>Subtotal: $${(item.price * item.quantity).toFixed(2)}</p>
+                    <p>Price: $${price.toFixed(2)}</p>
+                    <p>Quantity: ${quantity}</p>
+                    <p>Subtotal: $${subtotal.toFixed(2)}</p>
                 </div>
             </div>
         `;
@@ -169,19 +194,22 @@ function checkoutMath(cart) {
     let subtotal = 0;
 
     cart.forEach(function(item) {
-        subtotal += item.price * item.quantity;
+        const price = Number(item.price) || 0;
+        const quantity = Number(item.quantity) || 0;
+
+        subtotal += price * quantity;
     });
 
-    let discountPercent =
+    const discountPercent =
         Number(localStorage.getItem("couponDiscount")) || 0;
 
-    let discountAmount = subtotal * (discountPercent / 100);
+    const discountAmount = subtotal * (discountPercent / 100);
 
-    let discountedSubtotal = subtotal - discountAmount;
+    const discountedSubtotal = subtotal - discountAmount;
 
-    let tax = discountedSubtotal * taxRate;
+    const tax = discountedSubtotal * taxRate;
 
-    let total = discountedSubtotal + tax + deliveryFee;
+    const total = discountedSubtotal + tax + deliveryFee;
 
     document.getElementById("totalPrice").innerHTML = `
         <div class="calc">
